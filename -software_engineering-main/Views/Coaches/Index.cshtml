@@ -1,0 +1,60 @@
+﻿@model IEnumerable<SuMejorPeso.Models.Coach>
+
+@{
+    ViewData["Title"] = "Profesores Activos";
+}
+
+<h1 class="margen-barra">Profesores Activos</h1>
+
+<p>
+    <a class="btn " asp-action="Create">➕ Nuevo Profesor</a>
+    <a class="btn " asp-action="Inactive">👥 Ver Inactivos</a>
+</p>
+
+<table class="table table-striped table-fixed">
+    <colgroup>
+        <col style="width:20%;">
+        <col style="width:15%;">
+        <col style="width:15%;">
+        <col style="width:8%;">
+        <col style="width:15%;">
+        <col style="width:6%;">
+        <col style="width:80px;">
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Nombre Completo</th>
+            <th>DNI</th>
+            <th>Email</th>
+            <th>Login (Usuario)</th>
+            <th>Sede</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.name) @Html.DisplayFor(modelItem => item.lastName)</td>
+        <td>@Html.DisplayFor(modelItem => item.dni)</td>
+        <td>@Html.DisplayFor(modelItem => item.email)</td>
+        <td>@(item.user?.userName ?? "N/A")</td>
+        <td>@(item.branch?.name ?? "N/A")</td>
+        <td>@Html.DisplayFor(modelItem => item.state)</td>
+        <td>
+            <div class="dropdown">
+                <a class="nav-link dropdown-toggle toggle-table" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                opciones
+                </a>
+                <ul class="dropdown-menu dropdown-menu-table">
+                    <li> <a class="btn  dropdown-item" asp-action="Details" asp-route-id="@item.id">Ver</a> </li> 
+                    <li> <a class="btn  dropdown-item" asp-action="Edit" asp-route-id="@item.id">Editar</a> </li> 
+                    <li> <a class="btn  dropdown-item" asp-action="Delete" asp-route-id="@item.id">Desactivar</a> </li> 
+                </ul>
+            </div>
+        </td>
+    </tr>
+}
+    </tbody>
+</table>

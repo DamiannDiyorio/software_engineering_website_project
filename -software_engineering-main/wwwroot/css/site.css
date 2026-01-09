@@ -1,0 +1,828 @@
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/*
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}*/
+
+html
+{
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+    overflow-x: hidden !important;
+
+}
+
+body {
+  margin-bottom: 60px;
+  background-image: url("imagen-gym.png");
+  background-size: cover;        
+  background-position: center;   
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  overflow-x: hidden !important;
+}
+
+.list-group-item{
+  background-color: #2a2a2a;
+  color: #ddd;
+}
+.list-group-item:hover{
+  background-color: #333;
+  color: #ddd;
+}
+
+.body_overlay {
+  position: fixed;  
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;  height: 100%;
+  width: 100%;
+  background: linear-gradient(  transparent , #000b 85% ) ; 
+  z-index: 1;
+  pointer-events: none;
+}
+
+.delante,  .dropdown-menu{
+  position: relative;
+}
+
+.footer, .delante
+{
+  z-index: 3 !important;
+}
+
+
+
+.dropdown-menu
+{
+  z-index: 400 !important;
+}
+
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+
+/* boton para desplegar barra*/
+.navbar-toggler {
+  background-color: #ddd;
+  margin-bottom: 1em;
+}
+
+
+
+.navbar {
+  background-color:  #222 !important;
+  border-bottom: solid 2px #dc2 !important;
+  padding: 1em;
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 4;
+  left: 0;
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+
+
+.navbar-nav
+{
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+   flex: 1 1 space-between !important; /* permite encogimiento y expansión */
+  min-width: 0; 
+  
+}
+
+
+.navbar-brand {
+  color: #eee !important;
+  margin-right: 3em;
+  margin-bottom: 1em;
+}
+
+
+.sidebar-button {
+  text-align: center;
+}
+
+
+
+/* estilo de los links de la navbar*/
+.nav-link, .btn {  
+  color: #eee;
+  letter-spacing: 3px;
+  text-align: center;
+  padding: 0.7em 4em;
+  background-color: #323232;
+  font-family: tahoma;
+
+  border-radius: 0;
+  transition: border 0.2s, border-radius 0.3s,
+  background-color 0.24s;
+}
+
+
+.btn{
+  padding: 0.7em 1em;
+}
+
+
+.nav-link:hover {
+  outline: solid 1px #dc2;
+  background-color: #000;
+  color: #dc2 !important;
+  border-radius: 15px;
+}
+
+
+.nav-link:focus {
+  outline: solid 1px #dc2;
+  background-color: #000;
+  color: #dc2 !important;
+  border-radius: 15px;
+  box-shadow: none;
+}
+
+
+.btn:hover {
+  outline: solid 1px #dc2;
+  background-color: #000;
+  color: #dc2 !important;
+  border-radius: 15px;
+}
+
+.btn:focus {
+  outline: solid 1px #dc2;
+  background-color: #000;
+  color: #dc2 !important;
+  border-radius: 15px;
+  box-shadow: none;
+}
+
+.btn:active{
+  box-shadow: none !important;
+  background-color: #000 !important;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  padding: 1em;
+ 
+  border-top: solid  1px #dc2 !important;
+ 
+  color: #eee !important;
+}
+
+
+
+/*
+
+/* Estilos de formularioss  */
+.fondo-div, .fondo-div-completo
+{
+  display: flex;
+  background-color: #2a2a2a;
+  margin: 2em 0;
+  padding: 3em;
+  border-radius: 30px;
+  max-width: 500px;
+  width: 100%;
+  justify-content: center;
+}
+
+.fondo-div-completo{
+  max-width: 800px;
+}
+
+
+.div-create{
+  display: flex;
+  justify-content: flex-start; 
+  max-width: 100%;
+}
+
+
+/* 🔹 En pantallas muy chicas (celulares) */
+@media (max-width: 576px) {
+  .fondo-div {
+    width: 90%;
+    margin: 0.5em;
+    padding: 1em;
+    border-radius: 15px;
+
+  }
+
+  .div-create{
+    position: relative;
+    justify-content: center;
+
+  }
+}
+
+/*
+@media (max-width: 991px) {
+  main
+  {
+    justify-content: center;
+  }
+}
+
+
+
+/* Estilos de titulo de form  */
+
+
+.text-inicio{
+  color: #ddd;
+  letter-spacing: 3px;
+  text-align: center;
+  padding: 0.7em;
+  border-bottom: solid 1px #dc2;
+  margin-bottom: 1em;
+}
+
+.form-button{
+  width: 100%;
+}
+
+/* Estilos de input  */
+
+.form-input{
+  margin-bottom: 1.2em;
+  background-color: transparent;
+}
+
+.input-style{
+  width: 100%;
+  background-color: #323232;
+  padding: 0.4em;
+  border: none;
+  border-top: solid 1px #ddd;
+  color: #ddd;
+  margin: 3px;
+  font-family: inherit;
+  outline-offset: 4px;
+  transition:  outline-offset 0.34s, background-color 0.34s;
+ 
+}
+
+
+
+.input-style:focus
+{
+  outline: solid 1px #ddd;
+  outline-offset: 0;
+  border-top: solid 1px transparent;
+  background-color: #3a3a3a;
+  color: #ddd;
+}
+
+.input-style:-webkit-autofill,
+.input-style:-webkit-autofill:hover,
+.input-style:-webkit-autofill:focus,
+.input-style:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #333 inset !important;
+  box-shadow: 0 0 0 1000px #333 inset !important;
+  -webkit-text-fill-color: #ddd !important;        /* texto */
+  color: #ddd !important;                          
+  transition: background-color 5000s ease-in-out 0s, color 0s linear 0s;
+  caret-color: #ddd !important;    
+}
+
+.input-style:-moz-autofill {
+  box-shadow: 0 0 0 1000px #333 inset !important;
+  color: #ddd !important;
+  -moz-text-fill-color: #ddd !important; /* puede ayudar en FF  ddd */
+}
+
+
+.form-label
+{
+  margin-left: 0.5em;
+  color: #ddd;
+  line-height: 0.1;
+}
+
+
+
+fieldset
+{
+  padding: 10px 30px;
+  border: 1px solid #dc2;
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  margin-bottom: 2em;
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+  /* Restablece la posición típica del legend */
+  float: none;
+  margin-left: 10px;
+  color: #ddd;
+  width: 10em !important;
+  justify-content: center;
+}
+
+.text-muted
+{
+  color: #ddd !important;
+}
+
+
+.d-flex1{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.btn1{
+  margin: 0.5em;
+  flex-grow: 3;
+}
+
+.btn2{
+  flex-grow: 2;
+  margin: 0.5em;
+}
+.btn3{
+  flex-grow: 5;
+  margin: 0.5em;
+}
+
+
+/* .table-striped{
+  border: solid 3px #222;
+  table-layout: fixed;
+  width: 100%  !important;
+} */
+
+
+.table{
+  background-color: #2a2a2a;
+}
+
+.table-striped{
+  table-layout:  fixed;
+  background-color: #2a2a2a;    /* Fondo oscuro general */
+  border-collapse: collapse;
+  border-radius: 8px;           /* Bordes redondeados */
+  width: 100%  !important;
+}
+
+/* Encabezado de la tabla */
+th{
+  background-color: #111 !important;
+  color: #eee !important;
+  text-transform: uppercase;     /* Mayúsculas */
+  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+  padding: 1.25rem 0.75rem;
+  border-bottom: 2px solid #dc2; /* Tu línea dorada */
+}
+
+
+
+td{
+  color: #222 !important;
+  border-bottom: solid 1px #222;
+}
+
+/* th{
+  background-color: #111 !important;
+  color: #ddd !important;
+} */
+
+
+
+
+
+
+.table-striped th,
+.table-striped td {
+  word-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.table-striped td:last-child {
+  overflow: visible !important;
+}
+
+
+/* REEMPLAZA la regla de cebra por esta */
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  /* Esto le gana a la regla de Bootstrap (que es .table-striped > tbody > tr:nth-of-type(odd) > *)
+    y fuerza a que el fondo de la celda sea transparente.
+  */
+  background-color: transparent !important;
+}
+/* AÑADIR ESTO PARA UN EFECTO "HOVER" SUTIL */
+.table-striped > tbody > tr:hover {
+    background-color: #333 !important; /* Un gris oscuro al pasar el ratón */
+    cursor: default;
+}
+
+th{
+  background-color: #111 !important;
+  color: #eee !important;
+  text-transform: uppercase;     /* Mayúsculas para un look profesional */
+  letter-spacing: 1.5px;         /* Más espaciado entre letras */
+  font-size: 0.8rem;             /* Un poco más pequeño y sutil */
+  padding: 1.25rem 0.75rem;      /* Más padding vertical para que "respire" */
+  border-bottom: 2px solid #dc2; /* Línea de acento dorada */
+}
+.table-striped th,
+.table-striped td {
+  word-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* AÑADE ESTA REGLA para estilizar todas las celdas */
+td {
+  color: #ddd !important;            /* Texto claro */
+  background-color: transparent !important; /* Fondo transparente */
+  border-bottom: solid 1px #3a3a3a; /* Sutil línea divisoria */
+  padding: 1rem 0.75rem;             /* Espaciado */
+  vertical-align: middle;
+}
+
+
+
+/* boton dropdown*/
+
+.dropdown {
+  position: relative;
+ /* Asegura que el menú se posicione respecto al botón */
+}
+
+/* Estado inicial: oculto, desplazado hacia arriba */
+.dropdown-menu {
+  margin: 0;
+  padding: 0;
+  padding-top: 15px;
+  border: 0;
+  background-color: #444;
+  min-width: 100%; /* Hace que el ancho sea igual al del botón */
+  width: 100%;      /* Lo fuerza incluso si el contenido es más chico */
+  transform: translateY(-40px);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.25s ease;
+  display: block; /* necesario para que el transform funcione correctamente */
+  visibility: hidden;
+}
+
+.dropdown-menu-table{
+
+  position: absolute; 
+ 
+  z-index: 999 !important;       
+  display: block;     
+}
+
+/* Cuando se muestra el menú */
+.dropdown-menu.show {
+  transform: translateY(-16px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-item
+{
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-top: 1px;
+  white-space: normal;  
+  word-wrap: break-word; 
+  text-overflow: ellipsis; 
+  overflow-wrap: anywhere;
+}
+
+.dropdown-item:hover, 
+.dropdown-item:focus{
+  border-radius: 7px;
+}
+
+.dropdown-menu-table.show {
+  transform: translateY(27px) !important;
+}
+
+.dropdown-toggle{
+  position: relative;
+  z-index: 401 !important;
+  letter-spacing: 2px;
+}
+
+.toggle-table{
+  position: relative;
+  z-index: 401;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #111;
+}
+
+.toggle-table.show{
+  z-index: 1000 !important;
+}
+
+.dropdown-toggle.show {
+  box-shadow: none !important;
+  outline: none !important;
+  color: #ddd !important;
+  background-color: #323232 !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+/* HACIA ARRIBA  */
+.dropdown-menu-table[data-popper-placement^="top"] {
+  padding-top: 0 !important;
+  padding-bottom: 15px !important;
+    opacity: 0;
+  transform: translateY(1px) !important;
+  opacity: 0 !important; /* parte de abajo */
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Cuando se muestra hacia arriba */
+.dropdown-menu-table[data-popper-placement^="top"].show {
+  opacity: 1 !important;
+  transform: translateY(-27px) !important;
+}
+
+.dropdown:has(.dropdown-menu-table[data-popper-placement^="top"].show) > .toggle-table {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+
+main{
+  margin-bottom: 150px !important;
+  justify-content: center;
+}
+
+@media (max-width: 989px)
+{
+  .toggle-table{
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+    }
+  main{
+    min-width: 80vw;
+  }
+  .container{
+    min-width: 90vw;
+  }
+} 
+
+@media (max-width: 930px)
+{
+  table{
+    font-size: 13px;
+  }
+  .toggle-table{
+    padding-right: 3px !important;
+    padding-left: 3px !important;
+    font-size: 10px;
+  }
+  .dropdown-menu-table.show {
+  transform: translateY(15px) !important;
+  }
+  .dropdown-menu-table[data-popper-placement^="top"].show {
+  opacity: 1 !important;
+  transform: translateY(-15px) !important;
+  }
+
+} 
+
+@media (max-width: 768px)
+{
+  table{
+    font-size: 12px;
+  }
+  th{
+    font: 10px;
+    font-weight: none !important;
+  }
+  td, th{
+    padding-right: 3px !important;
+    padding-left: 3px !important;
+  }
+ 
+    .dropdown-menu-table.show {
+  transform: translateY(11px) !important;
+  } 
+
+  .dropdown-menu-table[data-popper-placement^="top"].show {
+  opacity: 1 !important;
+  transform: translateY(-13px) !important;
+  }
+  .dropdown-item
+  {
+    font-size: 11px !important;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .nav-link, .exit-button{
+    font-size: 12px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    letter-spacing: 1px;
+  }
+   .toggle-table{
+    padding-right: 3px !important;
+    padding-left: 3px !important;
+    font-size: 9px !important;
+  } 
+
+}
+
+@media (max-width: 576px)
+{
+
+  .toggle-table{
+    padding-right: 3px !important;
+    padding-left: 3px !important;
+    font-size: 7px;
+  }
+
+   /* .dropdown-menu-table.show {
+  transform: translateY(5px) !important;
+  } 
+  .dropdown-menu-table[data-popper-placement^="top"].show {
+  opacity: 1 !important;
+  transform: translateY(-7px) !important;
+  }*/
+
+  .dropdown-item
+  {
+    font-size: 9px !important;
+  }
+}
+
+.contenedor-general {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 1rem;
+  align-items: center !important;
+}
+
+.tarjeta-info, .card {
+  background-color: rgba(20, 20, 20, 0.8);
+  border: 1px solid #e5c900;
+  border-radius: 15px;
+  padding: 20px;
+  color: #fff;
+  width: 320px;
+  height: fit-content;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: aparecer 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Imagen decorativa */
+.img-coaches, .img-assignaments, 
+.sede_img, .img-classroom, .img-members, 
+.img-specialties,.img-membership, .img-users {
+  
+  background-size: cover;
+  background-position: center;
+  width: 90%;
+  height: 160px;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* Texto */
+.tarjeta-info h3 {
+  font-weight: bold;
+  color: #ffe76b;
+  margin-bottom: 10px;
+}
+
+.tarjeta-info hr {
+  border-color: #e5c90080;
+  width: 100%;
+}
+
+.tarjeta-info .texto-secundario {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.info-t{
+    background-color: rgba(20, 20, 20, 0.9);
+
+}
+/* Ocultar tarjeta en pantallas angostas */
+@media (max-width: 992px) {
+  .tarjeta-info {
+    display: none;
+  }
+
+}
+
+/* Animación */
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.img-assignaments {
+  background-image: url("actividades_img.jpeg"); /* ruta ajustable */
+}
+
+.sede_img {
+  background-image: url("sede_img.jpg"); /* ruta ajustable */
+}
+.img-classroom {
+  background-image: url("clases_img.jpeg"); /* ruta ajustable */
+}
+
+.img-members {
+  background-image: url("miembros-img.jpeg"); /* ruta ajustable */
+}
+.img-coaches {
+  background-image: url("entrenadores_img.jpg"); /* ruta ajustable */
+}
+.img-specialties{
+  background-image: url("specialidades_img.jpeg");
+}
+
+.img-membership {
+  background-image: url("membresias_img.jpeg");  
+}
+.img-users{
+  background-image: url("usuarios_img.jpeg");
+}
+
+.margen-barra{
+  margin-top: 150px;
+}
+
+h1 {
+    color: #ddd;
+    font-weight: bold;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    letter-spacing: 0.5px;
+    text-shadow:
+        3px 3px 10px rgba(0, 0, 0, 0.95),
+        0px 0px 6px rgba(0, 0, 0, 0.8);
+}
+
+h1 + p {
+  color: #ddd;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-shadow:
+        3px 3px 10px rgba(0, 0, 0, 0.95),
+        0px 0px 6px rgba(0, 0, 0, 0.8);
+}
+h4 + p {
+  color: #ddd;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-shadow:
+        3px 3px 10px rgba(0, 0, 0, 0.95),
+        0px 0px 6px rgba(0, 0, 0, 0.8);
+}
+h4, .text-claro{
+    color: #ddd;
+    text-shadow:
+        3px 3px 10px rgba(0, 0, 0, 0.95),
+        0px 0px 6px rgba(0, 0, 0, 0.8);
+}
+
+.text-negro{
+  color: #222;
+}
+

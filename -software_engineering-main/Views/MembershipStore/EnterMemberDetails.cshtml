@@ -1,0 +1,78 @@
+﻿@model SuMejorPeso.ViewModels.MemberDetailsViewModel
+
+@{ ViewData["Title"] = $"Completar Datos - {ViewBag.PlanName}"; }
+
+<h1 class="margen-barra">Completa tus Datos para Activar "@ViewBag.PlanName"</h1>
+<p>Necesitamos esta información para crear tu perfil de miembro.</p>
+<hr />
+
+<div class="contenedor-general">
+
+
+    <div class="row fondo-div">
+        <div class="col-md-12">
+
+            <form asp-action="CompletePurchase" method="post">
+                @* Pasa el ID del plan de forma oculta *@
+                <input type="hidden" asp-for="TypeMembershipId" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <fieldset>
+                    <legend>Datos de usuario</legend>
+                    <div class="form-input">
+                        <label asp-for="Dni"></label>
+                        <input asp-for="Dni" class="input-style" />
+                        <span asp-validation-for="Dni" class="text-danger"></span>
+                    </div>
+                    <div class="form-input">
+                        <label asp-for="Birthdate" class="form-label"></label>
+                        <input asp-for="Birthdate" class="input-style" type="date" />
+                        <span asp-validation-for="Birthdate" class="text-danger"></span>
+                    </div>
+                    <div class="form-input">
+                        <label asp-for="Gender" class="form-label"></label>
+                        <select asp-for="Gender" class="input-style">
+                            <option value="">Seleccione...</option>
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                            <option>Otro</option>
+                        </select>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                    <div class="form-input">
+                        <label asp-for="Phone" class="form-label"></label>
+                        <input asp-for="Phone" class="input-style" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                    <div class="form-input">
+                        <label asp-for="Direction" class="form-label"></label>
+                        <input asp-for="Direction" class="input-style" />
+                        <span asp-validation-for="Direction" class="text-danger"></span>
+                    </div>
+                </fieldset>
+
+                
+
+                <div class="form-group d-flex1">
+                    <button type="submit" class="btn btn2">Finalizar Compra y Activar (Simulado)</button>
+                    <a asp-action="Index" class="btn btn2">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="tarjeta-info">
+        <h3>👤 Registro</h3>
+        <p>
+            Completá todos tus datos personales correspondiente.  
+        </p>
+        <hr>
+      
+        <div class="img-users"></div>
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
